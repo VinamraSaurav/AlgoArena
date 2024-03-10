@@ -23,13 +23,15 @@ const RecommendedCard = ({ course }) => {
   const progressPercentage = (progress / chapterCount) * 100;
 
   return (
+    <div className="m-2">
     <Link
-      href={href}
-      className="border rounded-xl border-color-2 p-4 mb-5 backdrop-blur-[5px] hover:shadow-[0_0_10px_3px_#4a0f87] cursor-pointer text-[white] hover:text-color-2 m-2 w-[305px]"
+      href={href}>
+        <div
+      className="border rounded-xl border-color-2 p-4 backdrop-blur-[5px] hover:shadow-[0_0_10px_3px_#4a0f87] cursor-pointer text-[white] hover:text-color-2"
     >
       <div className=" flex gap-3">
         <div className="w-10/12 ">
-          <div className="font-poppins text-xl md:text-2xl mb-4 md:mb-2 font-[900] bg-clip-text bg-gradient-course text-transparent w-[250px] line-clamp-1">
+          <div className="font-poppins text-xl md:text-2xl mb-4 md:mb-2 font-[900] bg-clip-text bg-gradient-course text-transparent line-clamp-1">
             {title}
           </div>
           <div className="text-xs text-[white] font-popins font-[500] line-clamp-2">
@@ -51,7 +53,9 @@ const RecommendedCard = ({ course }) => {
           <FaArrowCircleRight className="text-3xl" />
         </div>
       </div>
+      </div>
     </Link>
+    </div>
   );
 };
 
